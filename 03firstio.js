@@ -1,6 +1,5 @@
-var fs = require('fs');
+const fs = require('fs');
 
-//console.log(process.argv);
-var buffer = fs.readFileSync(process.argv[2]);
-var lines = buffer.toString().split('\n').length;
-console.log(lines > 2 ? lines - 1 : 0);
+const fileBuffer = fs.readFileSync(process.argv[2]);
+const textLinesArr = (fileBuffer.toString()).split('\n');
+console.log(textLinesArr.length < 2 ? 0 : textLinesArr.length - 1);

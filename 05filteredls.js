@@ -1,15 +1,14 @@
-var fs = require('fs');
-var path = require('path');
+'use strict';
+const fs = require('fs');
 
-var fileExtension = "." + process.argv[3];
+const fileExtension = '.' + process.argv[3];
+
 fs.readdir(process.argv[2],
-	function(err, list){
-		if(err) throw err;
-		
-		list.forEach(function(element){
-			if(path.extname(element) == fileExtension){
-				console.log(element);
-			}			
-		});
-	});
-
+    (err, files) => {
+    if (err) throw err;
+    for (const fileName of files) {
+        if (fileName.endsWith(fileExtension)) {
+            console.log(fileName);
+        }
+    }
+  });

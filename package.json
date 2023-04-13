@@ -1,0 +1,27 @@
+{
+  "name": "learnyounode-answers",
+  "version": "1.0.0",
+  "description": "Solutions for https://github.com/workshopper/learnyounode",
+  "dependencies": {
+    "learnyounode": "^4.2.2"
+  },
+  "scripts": {
+    "start": "./node_modules/learnyounode/bin/learnyounode",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulinetheitgirl/learnyounode-answers.git"
+  },
+  "keywords": [
+    "node",
+    "workshopper",
+    "learnyounode"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulinetheitgirl/learnyounode-answers/issues"
+  },
+  "homepage": "https://github.com/paulinetheitgirl/learnyounode-answers#readme"
+}

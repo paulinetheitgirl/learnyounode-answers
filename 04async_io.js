@@ -1,12 +1,8 @@
-var fs = require('fs');
+const fs = require('fs');
 
-var bufferString;
-fs.readFile(process.argv[2],
-	{ 'encoding': 'utf8' },
-	function(err, data){
-		if(err) throw err;
-		bufferString = data;
-		var lines = bufferString.split('\n').length;
-		console.log(lines > 2 ? lines - 1 : 0);
-	});
+fs.readFile(process.argv[2], 'utf8', (err, stringData) => {
+    if (err) throw err;
+    const textLinesArr = stringData.split('\n');
+    console.log(textLinesArr.length < 2 ? 0 : textLinesArr.length - 1);
+  });
 

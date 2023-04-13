@@ -1,11 +1,10 @@
-var mymodule = require('./06modular_module.js'); // .js extension is optional
+'use strict';
+const mymodule = require('./06modular_module.js') 
 
 mymodule(process.argv[2],
-	process.argv[3],
-	function(err, data){
-		if(err) console.log("There was an error: ", error.stack);
-
-		data.forEach(function(element){
-			console.log(element);
-		});
-	});
+    process.argv[3],
+    (err, files) => {
+        for (const fileName of files) {
+            console.log(fileName);
+        }
+    });
